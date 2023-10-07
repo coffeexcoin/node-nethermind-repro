@@ -18,5 +18,5 @@ const filter = {
 
 provider.on(filter, (log) => {
     const event = iface.decodeEventLog("Transfer", log.data, log.topics);
-    console.log(event);
+    console.log(`Token ${event.tokenId} was transferred from ${event.from} to ${event.to}`);
 });
